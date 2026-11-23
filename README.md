@@ -13,3 +13,6 @@ curl.exe -L -o models\LFM3-1.7B-Q4_K_M.gguf https://huggingface.co/LiquidAI/LFM3
 dir models
 
 C:\llama\llama-server.exe -m models\LFM3-1.7B-Q4_K_M.gguf --host 127.0.0.1 --port 8080 -np 2 -c 8192 -t 2 --jinja --reasoning-format deepseek --reasoning-budget 0 --metrics
+
+cd C:\microinfer
+python -m mi_eval bench-batch --base-url http://127.0.0.1:8080/v1 --ns 1,2 --timeout 900
