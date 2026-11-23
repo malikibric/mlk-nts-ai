@@ -19,3 +19,9 @@ python -m mi_eval bench-batch --base-url http://127.0.0.1:8080/v1 --ns 1,2 --tim
 
 cd C:\microinfer
 python -m mi_eval run --task sql --mode free,cascade --base-url http://127.0.0.1:8080/v1 --profile lfm3-1.7b --n 2 --limit 5 --timeout 900
+
+novo
+C:\llama\llama-server.exe -m C:\microinfer\models\LFM3-1.7B-Q4_K_M.gguf --host 127.0.0.1 --port 8080 -np 2 -c 8192 -t 2 --jinja --reasoning-format deepseek --reasoning-budget 0 --metrics
+
+cd C:\microinfer
+python -m mi_eval run --task sql --mode free,cascade --base-url http://127.0.0.1:8080/v1 --profile lfm3-1.7b --n 2 --limit 5 --timeout 900
