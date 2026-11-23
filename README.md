@@ -16,3 +16,6 @@ C:\llama\llama-server.exe -m models\LFM3-1.7B-Q4_K_M.gguf --host 127.0.0.1 --por
 
 cd C:\microinfer
 python -m mi_eval bench-batch --base-url http://127.0.0.1:8080/v1 --ns 1,2 --timeout 900
+
+cd C:\microinfer
+python -m mi_eval run --task sql --mode free,cascade --base-url http://127.0.0.1:8080/v1 --profile lfm3-1.7b --n 2 --limit 5 --timeout 900
